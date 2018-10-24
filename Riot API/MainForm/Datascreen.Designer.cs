@@ -47,11 +47,15 @@
             this.flexLosesLabel = new System.Windows.Forms.Label();
             this.flexWinsLabel = new System.Windows.Forms.Label();
             this.flexLPLabel = new System.Windows.Forms.Label();
+            this.champPortrait = new System.Windows.Forms.PictureBox();
+            this.masteryLabel = new System.Windows.Forms.Label();
+            this.masteryNameLabel = new System.Windows.Forms.Label();
             ((System.ComponentModel.ISupportInitialize)(this.summonerIcon)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.soloIcon)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.flexIcon)).BeginInit();
             this.soloPanel.SuspendLayout();
             this.flexPanel.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.champPortrait)).BeginInit();
             this.SuspendLayout();
             // 
             // summonerIcon
@@ -71,7 +75,7 @@
             this.levelLabel.BackColor = System.Drawing.Color.Transparent;
             this.levelLabel.Font = new System.Drawing.Font("Verdana", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.levelLabel.ForeColor = System.Drawing.Color.LightSkyBlue;
-            this.levelLabel.Location = new System.Drawing.Point(21, 178);
+            this.levelLabel.Location = new System.Drawing.Point(21, 251);
             this.levelLabel.Name = "levelLabel";
             this.levelLabel.Size = new System.Drawing.Size(64, 25);
             this.levelLabel.TabIndex = 1;
@@ -84,7 +88,8 @@
             this.nameLabel.BackColor = System.Drawing.Color.Transparent;
             this.nameLabel.Font = new System.Drawing.Font("Verdana", 27.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.nameLabel.ForeColor = System.Drawing.Color.LightSkyBlue;
-            this.nameLabel.Location = new System.Drawing.Point(205, 76);
+            this.nameLabel.Location = new System.Drawing.Point(18, 190);
+            this.nameLabel.MaximumSize = new System.Drawing.Size(260, 45);
             this.nameLabel.Name = "nameLabel";
             this.nameLabel.Size = new System.Drawing.Size(128, 45);
             this.nameLabel.TabIndex = 2;
@@ -284,6 +289,42 @@
             this.flexLPLabel.TabIndex = 0;
             this.flexLPLabel.Text = "0 LP";
             // 
+            // champPortrait
+            // 
+            this.champPortrait.BackColor = System.Drawing.Color.Black;
+            this.champPortrait.BackgroundImageLayout = System.Windows.Forms.ImageLayout.None;
+            this.champPortrait.Location = new System.Drawing.Point(273, 76);
+            this.champPortrait.Name = "champPortrait";
+            this.champPortrait.Size = new System.Drawing.Size(200, 200);
+            this.champPortrait.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
+            this.champPortrait.TabIndex = 11;
+            this.champPortrait.TabStop = false;
+            // 
+            // masteryLabel
+            // 
+            this.masteryLabel.AutoSize = true;
+            this.masteryLabel.BackColor = System.Drawing.Color.Transparent;
+            this.masteryLabel.Font = new System.Drawing.Font("Verdana", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.masteryLabel.ForeColor = System.Drawing.Color.LightSkyBlue;
+            this.masteryLabel.Location = new System.Drawing.Point(353, 329);
+            this.masteryLabel.Name = "masteryLabel";
+            this.masteryLabel.Size = new System.Drawing.Size(34, 23);
+            this.masteryLabel.TabIndex = 12;
+            this.masteryLabel.Text = "10";
+            // 
+            // masteryNameLabel
+            // 
+            this.masteryNameLabel.AutoSize = true;
+            this.masteryNameLabel.BackColor = System.Drawing.Color.Transparent;
+            this.masteryNameLabel.Font = new System.Drawing.Font("Verdana", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.masteryNameLabel.ForeColor = System.Drawing.Color.LightSkyBlue;
+            this.masteryNameLabel.Location = new System.Drawing.Point(333, 286);
+            this.masteryNameLabel.Name = "masteryNameLabel";
+            this.masteryNameLabel.Size = new System.Drawing.Size(54, 25);
+            this.masteryNameLabel.TabIndex = 13;
+            this.masteryNameLabel.Text = "Jhin";
+            this.masteryNameLabel.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            // 
             // Datascreen
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -291,6 +332,9 @@
             this.BackgroundImage = global::MainForm.Properties.Resources.poro;
             this.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.ClientSize = new System.Drawing.Size(1044, 601);
+            this.Controls.Add(this.masteryNameLabel);
+            this.Controls.Add(this.masteryLabel);
+            this.Controls.Add(this.champPortrait);
             this.Controls.Add(this.flexPanel);
             this.Controls.Add(this.soloPanel);
             this.Controls.Add(this.flexIcon);
@@ -311,6 +355,7 @@
             this.soloPanel.PerformLayout();
             this.flexPanel.ResumeLayout(false);
             this.flexPanel.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.champPortrait)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -337,5 +382,8 @@
         private System.Windows.Forms.Label flexWinPLabel;
         private System.Windows.Forms.Label flexLosesLabel;
         private System.Windows.Forms.Label flexWinsLabel;
+        private System.Windows.Forms.PictureBox champPortrait;
+        private System.Windows.Forms.Label masteryLabel;
+        private System.Windows.Forms.Label masteryNameLabel;
     }
 }

@@ -11,7 +11,7 @@ namespace MainForm
 {
     class Requester
     {
-        private string key = "RGAPI-19330a3c-af0b-4b55-9724-cdf6e87a39af";
+        private string key = "";
 
         public Info summonerData(string region, string name)
         {
@@ -83,8 +83,6 @@ namespace MainForm
                     i++;
                 }
             }
-            Console.WriteLine("Flex: " + flex);
-            Console.WriteLine("Solo: " + solo);
 
             Info rankedData = new Info();
             try
@@ -97,6 +95,46 @@ namespace MainForm
                 Console.WriteLine("FUCK");
             }
             return rankedData;
+        }
+
+        public Info champData(string region, string summonerid)
+        {
+            char[] info = new char[300];
+            try
+            {
+                string url = "https://" + region + ".api.riotgames.com/lol/champion-mastery/v3/champion-masteries/by-summoner/" + summonerid + "?api_key=" + key;
+
+                HttpWebRequest request = (HttpWebRequest)WebRequest.Create(url);
+                request.AutomaticDecompression = DecompressionMethods.GZip;
+
+                using (HttpWebResponse response = (HttpWebResponse)request.GetResponse())
+                using (Stream stream = response.GetResponseStream())
+                using (StreamReader reader = new StreamReader(stream))
+                {
+                    reader.ReadBlock(info, 0, 300);
+                }
+            }
+            catch (WebException e)
+            {
+                Console.WriteLine("404");
+            }
+
+            bool delete = false;
+            string newinfo = "";
+            for(int i = 1; i<300; i++)
+            {             
+                if(!delete)
+                {
+                    newinfo += info[i];
+                }
+                if (info[i].Equals('}'))
+                {
+                    delete = true;
+                }
+            }
+            Info champData = new Info();
+            champData = JsonConvert.DeserializeObject<Info>(newinfo);
+            return champData;
         }
     }
 }

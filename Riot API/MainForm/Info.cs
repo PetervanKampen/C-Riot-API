@@ -30,5 +30,11 @@ namespace MainForm
 
         //ranked Flex class
         public Flex flexQ = new Flex();
+
+        //champion mastery JSON
+        public int championLevel { get; set; }
+        public int championPoints { get; set; }
+        public long championId { get; set; }
+
     }
 }

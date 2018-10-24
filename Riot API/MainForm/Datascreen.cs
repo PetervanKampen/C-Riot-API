@@ -16,6 +16,7 @@ namespace MainForm
         private Info data;
         private Info summonerData;
         private Info rankedData;
+        private Info champData;
 
         public Datascreen(Info data_, Info summonerdata_)
         {
@@ -32,6 +33,7 @@ namespace MainForm
             catch (WebException e) { }
             levelLabel.Text = "Level "+ summonerData.summonerLevel.ToString();
             nameLabel.Text = summonerData.name;
+
             rankedData = new Requester().rankedData(data.Region, summonerData.id.ToString());
 
             soloLabel.Text = rankedData.tier + " " + rankedData.rank;
@@ -76,6 +78,11 @@ namespace MainForm
                 case "MASTER": flexIcon.Image = global::MainForm.Properties.Resources.master; break;
                 case "CHALLENGER": flexIcon.Image = global::MainForm.Properties.Resources.challenger; break;
             }
+
+            champData = new Requester().champData(data.Region, summonerData.id.ToString());
+
+            masteryLabel.Text = champData.championPoints.ToString();
+            champPortrait.ImageLocation = "http://ddragon.leagueoflegends.com/cdn/6.24.1/img/champion/Jhin.png";
         }
 
         private void soloIcon_Click(object sender, EventArgs e)
