@@ -1,6 +1,6 @@
 ﻿namespace MainForm
 {
-    partial class Form1
+    partial class Mainscreen
     {
         /// <summary>
         /// Required designer variable.
@@ -31,7 +31,7 @@
             this.nameInput = new System.Windows.Forms.TextBox();
             this.regionDropdown = new System.Windows.Forms.ComboBox();
             this.label1 = new System.Windows.Forms.Label();
-            this.button1 = new System.Windows.Forms.Button();
+            this.proceedButton = new System.Windows.Forms.Button();
             this.SuspendLayout();
             // 
             // nameInput
@@ -43,6 +43,7 @@
             this.nameInput.Name = "nameInput";
             this.nameInput.Size = new System.Drawing.Size(252, 37);
             this.nameInput.TabIndex = 0;
+            this.nameInput.Text = "Petrovic258";
             this.nameInput.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
             // 
             // regionDropdown
@@ -72,20 +73,20 @@
             this.label1.TabIndex = 2;
             this.label1.Text = "Summoner Name              Region\r\n\r\n";
             // 
-            // button1
+            // proceedButton
             // 
-            this.button1.BackColor = System.Drawing.Color.LightSkyBlue;
-            this.button1.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.button1.Font = new System.Drawing.Font("Verdana", 18F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.button1.Location = new System.Drawing.Point(786, 535);
-            this.button1.Name = "button1";
-            this.button1.Size = new System.Drawing.Size(125, 37);
-            this.button1.TabIndex = 3;
-            this.button1.Text = "Go!";
-            this.button1.UseVisualStyleBackColor = false;
-            this.button1.Click += new System.EventHandler(this.button1_Click);
+            this.proceedButton.BackColor = System.Drawing.Color.LightSkyBlue;
+            this.proceedButton.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.proceedButton.Font = new System.Drawing.Font("Verdana", 18F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.proceedButton.Location = new System.Drawing.Point(786, 535);
+            this.proceedButton.Name = "proceedButton";
+            this.proceedButton.Size = new System.Drawing.Size(125, 37);
+            this.proceedButton.TabIndex = 3;
+            this.proceedButton.Text = "Go!";
+            this.proceedButton.UseVisualStyleBackColor = false;
+            this.proceedButton.Click += new System.EventHandler(this.proceedButton_Click);
             // 
-            // Form1
+            // Mainscreen
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
@@ -93,12 +94,12 @@
             this.BackgroundImage = global::MainForm.Properties.Resources.LoL_Icon;
             this.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Center;
             this.ClientSize = new System.Drawing.Size(1044, 601);
-            this.Controls.Add(this.button1);
+            this.Controls.Add(this.proceedButton);
             this.Controls.Add(this.label1);
             this.Controls.Add(this.regionDropdown);
             this.Controls.Add(this.nameInput);
             this.DoubleBuffered = true;
-            this.Name = "Form1";
+            this.Name = "Mainscreen";
             this.Text = "Form1";
             this.ResumeLayout(false);
             this.PerformLayout();
@@ -110,7 +111,7 @@
         private System.Windows.Forms.TextBox nameInput;
         private System.Windows.Forms.ComboBox regionDropdown;
         private System.Windows.Forms.Label label1;
-        private System.Windows.Forms.Button button1;
+        private System.Windows.Forms.Button proceedButton;
     }
 }
 

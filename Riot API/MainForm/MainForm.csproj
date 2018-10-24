@@ -33,6 +33,10 @@
     <WarningLevel>4</WarningLevel>
   </PropertyGroup>
   <ItemGroup>
+    <Reference Include="Newtonsoft.Json, Version=11.0.0.0, Culture=neutral, PublicKeyToken=30ad4fe6b2a6aeed, processorArchitecture=MSIL">
+      <HintPath>..\packages\Newtonsoft.Json.11.0.2\lib\net45\Newtonsoft.Json.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
     <Reference Include="System" />
     <Reference Include="System.Core" />
     <Reference Include="System.Xml.Linq" />
@@ -46,16 +50,28 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="Form1.cs">
+    <Compile Include="Datascreen.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="Form1.Designer.cs">
-      <DependentUpon>Form1.cs</DependentUpon>
+    <Compile Include="Datascreen.Designer.cs">
+      <DependentUpon>Datascreen.cs</DependentUpon>
     </Compile>
+    <Compile Include="Flex.cs" />
+    <Compile Include="Mainscreen.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Mainscreen.Designer.cs">
+      <DependentUpon>Mainscreen.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Info.cs" />
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
-    <EmbeddedResource Include="Form1.resx">
-      <DependentUpon>Form1.cs</DependentUpon>
+    <Compile Include="Requester.cs" />
+    <EmbeddedResource Include="Datascreen.resx">
+      <DependentUpon>Datascreen.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Mainscreen.resx">
+      <DependentUpon>Mainscreen.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Properties\Resources.resx">
       <Generator>ResXFileCodeGenerator</Generator>
@@ -67,6 +83,7 @@
       <DependentUpon>Resources.resx</DependentUpon>
       <DesignTime>True</DesignTime>
     </Compile>
+    <None Include="packages.config" />
     <None Include="Properties\Settings.settings">
       <Generator>SettingsSingleFileGenerator</Generator>
       <LastGenOutput>Settings.Designer.cs</LastGenOutput>
@@ -82,6 +99,33 @@
   </ItemGroup>
   <ItemGroup>
     <None Include="Images\LoL_Icon.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Images\poro.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Images\bronze.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Images\challenger.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Images\diamond.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Images\gold.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Images\master.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Images\platinum.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Images\provisional.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Images\silver.png" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
