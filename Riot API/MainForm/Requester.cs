@@ -12,7 +12,7 @@ namespace MainForm
 {
     class Requester
     {
-        private string key = "";
+        private string key = "RGAPI-0bff1920-2eea-4eac-a99c-f847a5f99719";
 
         public Info summonerData(string region, string name)
         {
@@ -71,11 +71,11 @@ namespace MainForm
                 char[] array = info.ToCharArray();
                 if(!secondstring)
                 {
-                    flex += array[i];
+                    solo += array[i];
                 }
                 else
                 {
-                    solo += array[i];
+                    flex += array[i];
                 }
                 if (array[i].Equals('}'))
                 {
@@ -84,16 +84,43 @@ namespace MainForm
                     i++;
                 }
             }
+            if(solo.Contains("RANKED_FLEX_SR") || flex.Contains("RANKED_SOLO_5x5"))
+            {
+                string temp = solo;
+                solo = flex;
+                flex = temp;
+            }
 
             Info rankedData = new Info();
             try
             {
-                Console.WriteLine("a");
-                Console.WriteLine("solo: " + solo);
-                rankedData = JsonConvert.DeserializeObject<Info>(solo);
-                Console.WriteLine("b");
-                rankedData.flexQ = JsonConvert.DeserializeObject<Flex>(flex);
-                Console.WriteLine("c");
+
+                if (flex == "")
+                {
+                    flex = "{\"leagueId\":\"\",\"leagueName\":\"\",\"tier\":\"PROVISIONAL\",\"queueType\":\"RANKED_FLEX_SR\",\"rank\":\"\",\"playerOrTeamId\":\"\",\"playerOrTeamName\":\"\",\"leaguePoints\":0,\"wins\":0,\"losses\":0}";
+                    rankedData.flexQ = JsonConvert.DeserializeObject<Flex>(flex);
+                    Console.WriteLine("FLEX CUNT");
+                }
+                else
+                {
+                    rankedData.flexQ = JsonConvert.DeserializeObject<Flex>(flex);
+                    Console.WriteLine("FLEX CUNT+++: " + flex);
+                }
+
+                if (solo == "")
+                {
+                    solo = "{\"leagueId\":\"\",\"leagueName\":\"\",\"tier\":\"PROVISIONAL\",\"queueType\":\"RANKED_SOLO_5x5\",\"rank\":\"\",\"playerOrTeamId\":\"\",\"playerOrTeamName\":\"\",\"leaguePoints\":0,\"wins\":0,\"losses\":0}";
+                    rankedData = JsonConvert.DeserializeObject<Info>(solo);
+                    Console.WriteLine("SOLO CUNT");
+                }
+                else
+                {
+                    rankedData = JsonConvert.DeserializeObject<Info>(solo);
+                    Console.WriteLine("SOLO CUNT+++");
+                }
+           
+
+                
             }
             catch(JsonReaderException e)
             {

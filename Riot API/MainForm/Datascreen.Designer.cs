@@ -38,11 +38,13 @@
             this.soloIcon = new System.Windows.Forms.PictureBox();
             this.flexIcon = new System.Windows.Forms.PictureBox();
             this.soloPanel = new System.Windows.Forms.Panel();
+            this.soloDivName = new System.Windows.Forms.Label();
             this.soloWinPLabel = new System.Windows.Forms.Label();
             this.soloWinsLabel = new System.Windows.Forms.Label();
             this.soloLosesLabel = new System.Windows.Forms.Label();
             this.soloLPLabel = new System.Windows.Forms.Label();
             this.flexPanel = new System.Windows.Forms.Panel();
+            this.flexDivName = new System.Windows.Forms.Label();
             this.flexWinPLabel = new System.Windows.Forms.Label();
             this.flexLosesLabel = new System.Windows.Forms.Label();
             this.flexWinsLabel = new System.Windows.Forms.Label();
@@ -50,8 +52,7 @@
             this.champPortrait = new System.Windows.Forms.PictureBox();
             this.masteryLabel = new System.Windows.Forms.Label();
             this.masteryNameLabel = new System.Windows.Forms.Label();
-            this.soloDivName = new System.Windows.Forms.Label();
-            this.flexDivName = new System.Windows.Forms.Label();
+            this.masteryIndicator = new System.Windows.Forms.Label();
             ((System.ComponentModel.ISupportInitialize)(this.summonerIcon)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.soloIcon)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.flexIcon)).BeginInit();
@@ -184,6 +185,18 @@
             this.soloPanel.TabIndex = 9;
             this.soloPanel.Visible = false;
             // 
+            // soloDivName
+            // 
+            this.soloDivName.AutoSize = true;
+            this.soloDivName.BackColor = System.Drawing.Color.Transparent;
+            this.soloDivName.Font = new System.Drawing.Font("Verdana", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.soloDivName.ForeColor = System.Drawing.Color.LightSkyBlue;
+            this.soloDivName.Location = new System.Drawing.Point(12, 22);
+            this.soloDivName.Name = "soloDivName";
+            this.soloDivName.Size = new System.Drawing.Size(83, 18);
+            this.soloDivName.TabIndex = 5;
+            this.soloDivName.Text = "Bitchbois";
+            // 
             // soloWinPLabel
             // 
             this.soloWinPLabel.AutoSize = true;
@@ -244,6 +257,18 @@
             this.flexPanel.Size = new System.Drawing.Size(200, 150);
             this.flexPanel.TabIndex = 10;
             this.flexPanel.Visible = false;
+            // 
+            // flexDivName
+            // 
+            this.flexDivName.AutoSize = true;
+            this.flexDivName.BackColor = System.Drawing.Color.Transparent;
+            this.flexDivName.Font = new System.Drawing.Font("Verdana", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.flexDivName.ForeColor = System.Drawing.Color.LightSkyBlue;
+            this.flexDivName.Location = new System.Drawing.Point(18, 22);
+            this.flexDivName.Name = "flexDivName";
+            this.flexDivName.Size = new System.Drawing.Size(83, 18);
+            this.flexDivName.TabIndex = 6;
+            this.flexDivName.Text = "Bitchbois";
             // 
             // flexWinPLabel
             // 
@@ -329,29 +354,17 @@
             this.masteryNameLabel.Text = "Jhin";
             this.masteryNameLabel.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             // 
-            // soloDivName
+            // masteryIndicator
             // 
-            this.soloDivName.AutoSize = true;
-            this.soloDivName.BackColor = System.Drawing.Color.Transparent;
-            this.soloDivName.Font = new System.Drawing.Font("Verdana", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.soloDivName.ForeColor = System.Drawing.Color.LightSkyBlue;
-            this.soloDivName.Location = new System.Drawing.Point(12, 22);
-            this.soloDivName.Name = "soloDivName";
-            this.soloDivName.Size = new System.Drawing.Size(83, 18);
-            this.soloDivName.TabIndex = 5;
-            this.soloDivName.Text = "Bitchbois";
-            // 
-            // flexDivName
-            // 
-            this.flexDivName.AutoSize = true;
-            this.flexDivName.BackColor = System.Drawing.Color.Transparent;
-            this.flexDivName.Font = new System.Drawing.Font("Verdana", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.flexDivName.ForeColor = System.Drawing.Color.LightSkyBlue;
-            this.flexDivName.Location = new System.Drawing.Point(18, 22);
-            this.flexDivName.Name = "flexDivName";
-            this.flexDivName.Size = new System.Drawing.Size(83, 18);
-            this.flexDivName.TabIndex = 6;
-            this.flexDivName.Text = "Bitchbois";
+            this.masteryIndicator.AutoSize = true;
+            this.masteryIndicator.BackColor = System.Drawing.Color.Transparent;
+            this.masteryIndicator.Font = new System.Drawing.Font("Verdana", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.masteryIndicator.ForeColor = System.Drawing.Color.LightSkyBlue;
+            this.masteryIndicator.Location = new System.Drawing.Point(291, 25);
+            this.masteryIndicator.Name = "masteryIndicator";
+            this.masteryIndicator.Size = new System.Drawing.Size(163, 23);
+            this.masteryIndicator.TabIndex = 14;
+            this.masteryIndicator.Text = "Highest Mastery";
             // 
             // Datascreen
             // 
@@ -360,6 +373,7 @@
             this.BackgroundImage = global::MainForm.Properties.Resources.poro;
             this.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.ClientSize = new System.Drawing.Size(1044, 601);
+            this.Controls.Add(this.masteryIndicator);
             this.Controls.Add(this.masteryNameLabel);
             this.Controls.Add(this.masteryLabel);
             this.Controls.Add(this.champPortrait);
@@ -415,5 +429,6 @@
         private System.Windows.Forms.Label masteryNameLabel;
         private System.Windows.Forms.Label soloDivName;
         private System.Windows.Forms.Label flexDivName;
+        private System.Windows.Forms.Label masteryIndicator;
     }
 }
