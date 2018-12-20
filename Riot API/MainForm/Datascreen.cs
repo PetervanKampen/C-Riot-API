@@ -28,7 +28,7 @@ namespace MainForm
 
         private void InitializeData()
         {
-            string url = "http://ddragon.leagueoflegends.com/cdn/6.24.1/img/profileicon/" + summonerData.profileIconId + ".png";
+            string url = "http://ddragon.leagueoflegends.com/cdn/8.24.1/img/profileicon/" + summonerData.profileIconId + ".png";
             try {summonerIcon.Load(url);}
             catch (WebException e) { }
             levelLabel.Text = "Level "+ summonerData.summonerLevel.ToString();
@@ -89,7 +89,7 @@ namespace MainForm
 
             masteryLabel.Text = champData.championPoints.ToString();
             masteryNameLabel.Text = champData.championName;
-            champPortrait.ImageLocation = "http://ddragon.leagueoflegends.com/cdn/6.24.1/img/champion/"+ champData.championName + ".png";
+            champPortrait.ImageLocation = "http://ddragon.leagueoflegends.com/cdn/8.24.1/img/champion/"+ champData.championName + ".png";
         }
 
         private void soloIcon_Click(object sender, EventArgs e)

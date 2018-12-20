@@ -27,7 +27,6 @@ namespace MainForm
         public int leaguePoints { get; set; }
         public int wins { get; set; }
         public int losses { get; set; }
-        public string playerOrTeamName { get; set; }
 
         //ranked Flex class
         public Flex flexQ = new Flex();
