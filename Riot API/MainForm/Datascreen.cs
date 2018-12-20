@@ -38,6 +38,14 @@ namespace MainForm
 
             soloLabel.Text = rankedData.tier + " " + rankedData.rank;
             soloLPLabel.Text = rankedData.leaguePoints + " LP";
+            if(rankedData.leaguePoints == 0)
+            {
+                this.soloLPLabel.ForeColor = System.Drawing.Color.Red;
+            }
+            else if(rankedData.leaguePoints == 100)
+            {
+                this.soloLPLabel.ForeColor = System.Drawing.Color.SpringGreen;
+            }
             soloWinsLabel.Text = rankedData.wins + " W";
             soloLosesLabel.Text = rankedData.losses + " L";
             soloDivName.Text = rankedData.leagueName;
@@ -46,9 +54,27 @@ namespace MainForm
             double winP = wins / (wins + losses) * 100;
             winP = System.Math.Round(winP, 2);
             soloWinPLabel.Text = winP + "%";
+            if(winP >= 50)
+            {
+                this.soloWinPLabel.ForeColor = System.Drawing.Color.SpringGreen;
+            }
+            else
+            {
+                this.soloWinPLabel.ForeColor = System.Drawing.Color.Red;
+            }
+
+            Console.WriteLine("cunt: "+rankedData.flexQ.leagueName);
 
             flexLabel.Text = rankedData.flexQ.tier + " " + rankedData.flexQ.rank;
             flexLPLabel.Text = rankedData.flexQ.leaguePoints + " LP";
+            if (rankedData.flexQ.leaguePoints == 0)
+            {
+                this.flexLPLabel.ForeColor = System.Drawing.Color.Red;
+            }
+            else if (rankedData.flexQ.leaguePoints == 100)
+            {
+                this.flexLPLabel.ForeColor = System.Drawing.Color.SpringGreen;
+            }
             flexWinsLabel.Text = rankedData.flexQ.wins + " W";
             flexLosesLabel.Text = rankedData.flexQ.losses + " L";
             flexDivName.Text = rankedData.flexQ.leagueName;
@@ -57,6 +83,14 @@ namespace MainForm
             double flexwinP = flexwins / (flexwins + flexlosses) * 100;
             winP = System.Math.Round(flexwinP, 2);
             flexWinPLabel.Text = winP + "%";
+            if (winP >= 50)
+            {
+                this.flexWinPLabel.ForeColor = System.Drawing.Color.SpringGreen;
+            }
+            else
+            {
+                this.flexWinPLabel.ForeColor = System.Drawing.Color.Red;
+            }
 
             switch (rankedData.tier)
             {
@@ -87,33 +121,45 @@ namespace MainForm
 
             champData = new Requester().champData(data.Region, summonerData.id.ToString());
 
-            masteryLabel.Text = champData.championPoints.ToString();
+            masteryLabel.Text = champData.championPoints.ToString() + "\nMastery Points";
             masteryNameLabel.Text = champData.championName;
-            champPortrait.ImageLocation = "http://ddragon.leagueoflegends.com/cdn/8.24.1/img/champion/"+ champData.championName + ".png";
+            champPortrait.ImageLocation = "http://ddragon.leagueoflegends.com/cdn/8.24.1/img/champion/" + champData.championName + ".png";
+            championImage.ImageLocation = "http://ddragon.leagueoflegends.com/cdn/img/champion/loading/" + champData.championName + "_0.jpg";
         }
 
         private void soloIcon_Click(object sender, EventArgs e)
         {
-            if (soloPanel.Visible)
+            if (rankedData.wins != 0 && rankedData.losses != 0)
             {
-                soloPanel.Visible = false;
-            }
-            else
-            {
-                soloPanel.Visible = true;
+                if (soloPanel.Visible)
+                {
+                    soloPanel.Visible = false;
+                }
+                else
+                {
+                    soloPanel.Visible = true;
+                }
             }
         }
 
         private void flexIcon_Click(object sender, EventArgs e)
         {
-            if (flexPanel.Visible)
+            if(rankedData.flexQ.wins != 0 && rankedData.flexQ.losses != 0)
             {
-                flexPanel.Visible = false;
+                if (flexPanel.Visible)
+                {
+                    flexPanel.Visible = false;
+                }
+                else
+                {
+                    flexPanel.Visible = true;
+                }
             }
-            else
-            {
-                flexPanel.Visible = true;
-            }
+        }
+
+        private void soloLabel_Click(object sender, EventArgs e)
+        {
+
         }
     }
 }
