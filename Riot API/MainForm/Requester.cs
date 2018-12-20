@@ -6,6 +6,7 @@ using System.Threading.Tasks;
 using System.Net;
 using System.IO;
 using Newtonsoft.Json;
+using Newtonsoft.Json.Linq;
 
 namespace MainForm
 {
@@ -87,12 +88,16 @@ namespace MainForm
             Info rankedData = new Info();
             try
             {
+                Console.WriteLine("a");
+                Console.WriteLine("solo: " + solo);
                 rankedData = JsonConvert.DeserializeObject<Info>(solo);
+                Console.WriteLine("b");
                 rankedData.flexQ = JsonConvert.DeserializeObject<Flex>(flex);
+                Console.WriteLine("c");
             }
             catch(JsonReaderException e)
             {
-                Console.WriteLine("FUCK");
+                Console.WriteLine("FUCK " + e.Message);
             }
             return rankedData;
         }
@@ -118,7 +123,7 @@ namespace MainForm
             {
                 Console.WriteLine("404");
             }
-
+            
             bool delete = false;
             string newinfo = "";
             for(int i = 1; i<300; i++)
@@ -132,9 +137,12 @@ namespace MainForm
                     delete = true;
                 }
             }
+            Console.WriteLine("champ info: " + newinfo);
             Info champData = new Info();
             champData = JsonConvert.DeserializeObject<Info>(newinfo);
+            champData.championName = new ChampionID().IDtoName(champData.championId);
             return champData;
         }
+
     }
 }

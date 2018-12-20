@@ -50,6 +50,7 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="ChampionID.cs" />
     <Compile Include="Datascreen.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -69,6 +70,7 @@
     <Compile Include="Requester.cs" />
     <EmbeddedResource Include="Datascreen.resx">
       <DependentUpon>Datascreen.cs</DependentUpon>
+      <SubType>Designer</SubType>
     </EmbeddedResource>
     <EmbeddedResource Include="Mainscreen.resx">
       <DependentUpon>Mainscreen.cs</DependentUpon>
@@ -126,6 +128,12 @@
   </ItemGroup>
   <ItemGroup>
     <None Include="Images\silver.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Images\iron.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Images\grandmaster.png" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
