@@ -99,6 +99,7 @@
             this.Controls.Add(this.regionDropdown);
             this.Controls.Add(this.nameInput);
             this.DoubleBuffered = true;
+            this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedSingle;
             this.Name = "Mainscreen";
             this.Text = "Form1";
             this.ResumeLayout(false);

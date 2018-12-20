@@ -135,6 +135,30 @@
   <ItemGroup>
     <None Include="Images\grandmaster.png" />
   </ItemGroup>
+  <ItemGroup>
+    <None Include="Images\Champion_Mastery_Level_1.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Images\Champion_Mastery_Level_2.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Images\Champion_Mastery_Level_3.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Images\Champion_Mastery_Level_4.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Images\Champion_Mastery_Level_5.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Images\Champion_Mastery_Level_6.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Images\Champion_Mastery_Level_7.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Images\Champion_Mastery_Level_7_Square.png" />
+  </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
        Other similar extension points exist, see Microsoft.Common.targets.
