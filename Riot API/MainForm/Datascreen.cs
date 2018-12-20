@@ -40,6 +40,7 @@ namespace MainForm
             soloLPLabel.Text = rankedData.leaguePoints + " LP";
             soloWinsLabel.Text = rankedData.wins + " W";
             soloLosesLabel.Text = rankedData.losses + " L";
+            soloDivName.Text = rankedData.leagueName;
             double wins = rankedData.wins;
             double losses = rankedData.losses;
             double winP = wins / (wins + losses) * 100;
@@ -50,6 +51,7 @@ namespace MainForm
             flexLPLabel.Text = rankedData.flexQ.leaguePoints + " LP";
             flexWinsLabel.Text = rankedData.flexQ.wins + " W";
             flexLosesLabel.Text = rankedData.flexQ.losses + " L";
+            flexDivName.Text = rankedData.flexQ.leagueName;
             double flexwins = rankedData.flexQ.wins;
             double flexlosses = rankedData.flexQ.losses;
             double flexwinP = flexwins / (flexwins + flexlosses) * 100;
@@ -59,30 +61,35 @@ namespace MainForm
             switch (rankedData.tier)
             {
                 case "PROVISIONAL": soloIcon.Image = global::MainForm.Properties.Resources.provisional; break;
+                case "IRON": soloIcon.Image = global::MainForm.Properties.Resources.iron; break;
                 case "BRONZE": soloIcon.Image = global::MainForm.Properties.Resources.bronze; break;
                 case "SILVER": soloIcon.Image = global::MainForm.Properties.Resources.silver; break;
                 case "GOLD": soloIcon.Image = global::MainForm.Properties.Resources.gold; break;
                 case "PLATINUM": soloIcon.Image = global::MainForm.Properties.Resources.platinum; break;
                 case "DIAMOND": soloIcon.Image = global::MainForm.Properties.Resources.diamond; break;
                 case "MASTER": soloIcon.Image = global::MainForm.Properties.Resources.master; break;
+                case "GRANDMASTER": soloIcon.Image = global::MainForm.Properties.Resources.grandmaster; break;
                 case "CHALLENGER": soloIcon.Image = global::MainForm.Properties.Resources.challenger; break;
             }
             switch (rankedData.flexQ.tier)
             {
                 case "PROVISIONAL": flexIcon.Image = global::MainForm.Properties.Resources.provisional; break;
+                case "IRON": flexIcon.Image = global::MainForm.Properties.Resources.iron; break;
                 case "BRONZE": flexIcon.Image = global::MainForm.Properties.Resources.bronze; break;
                 case "SILVER": flexIcon.Image = global::MainForm.Properties.Resources.silver; break;
                 case "GOLD": flexIcon.Image = global::MainForm.Properties.Resources.gold; break;
                 case "PLATINUM": flexIcon.Image = global::MainForm.Properties.Resources.platinum; break;
                 case "DIAMOND": flexIcon.Image = global::MainForm.Properties.Resources.diamond; break;
                 case "MASTER": flexIcon.Image = global::MainForm.Properties.Resources.master; break;
+                case "GRANDMASTER": flexIcon.Image = global::MainForm.Properties.Resources.grandmaster; break;
                 case "CHALLENGER": flexIcon.Image = global::MainForm.Properties.Resources.challenger; break;
             }
 
             champData = new Requester().champData(data.Region, summonerData.id.ToString());
 
             masteryLabel.Text = champData.championPoints.ToString();
-            champPortrait.ImageLocation = "http://ddragon.leagueoflegends.com/cdn/6.24.1/img/champion/Jhin.png";
+            masteryNameLabel.Text = champData.championName;
+            champPortrait.ImageLocation = "http://ddragon.leagueoflegends.com/cdn/6.24.1/img/champion/"+ champData.championName + ".png";
         }
 
         private void soloIcon_Click(object sender, EventArgs e)

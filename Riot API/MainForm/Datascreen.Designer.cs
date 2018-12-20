@@ -50,6 +50,8 @@
             this.champPortrait = new System.Windows.Forms.PictureBox();
             this.masteryLabel = new System.Windows.Forms.Label();
             this.masteryNameLabel = new System.Windows.Forms.Label();
+            this.soloDivName = new System.Windows.Forms.Label();
+            this.flexDivName = new System.Windows.Forms.Label();
             ((System.ComponentModel.ISupportInitialize)(this.summonerIcon)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.soloIcon)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.flexIcon)).BeginInit();
@@ -147,11 +149,11 @@
             // 
             this.soloIcon.BackColor = System.Drawing.Color.Transparent;
             this.soloIcon.BackgroundImageLayout = System.Windows.Forms.ImageLayout.None;
-            this.soloIcon.Image = global::MainForm.Properties.Resources.bronze;
+            this.soloIcon.Image = global::MainForm.Properties.Resources.iron;
             this.soloIcon.Location = new System.Drawing.Point(536, 76);
             this.soloIcon.Name = "soloIcon";
             this.soloIcon.Size = new System.Drawing.Size(200, 200);
-            this.soloIcon.SizeMode = System.Windows.Forms.PictureBoxSizeMode.CenterImage;
+            this.soloIcon.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
             this.soloIcon.TabIndex = 7;
             this.soloIcon.TabStop = false;
             this.soloIcon.Click += new System.EventHandler(this.soloIcon_Click);
@@ -159,11 +161,11 @@
             // flexIcon
             // 
             this.flexIcon.BackColor = System.Drawing.Color.Transparent;
-            this.flexIcon.Image = global::MainForm.Properties.Resources.challenger;
+            this.flexIcon.Image = global::MainForm.Properties.Resources.grandmaster;
             this.flexIcon.Location = new System.Drawing.Point(803, 76);
             this.flexIcon.Name = "flexIcon";
             this.flexIcon.Size = new System.Drawing.Size(200, 200);
-            this.flexIcon.SizeMode = System.Windows.Forms.PictureBoxSizeMode.CenterImage;
+            this.flexIcon.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
             this.flexIcon.TabIndex = 8;
             this.flexIcon.TabStop = false;
             this.flexIcon.Click += new System.EventHandler(this.flexIcon_Click);
@@ -171,6 +173,7 @@
             // soloPanel
             // 
             this.soloPanel.BackColor = System.Drawing.SystemColors.Control;
+            this.soloPanel.Controls.Add(this.soloDivName);
             this.soloPanel.Controls.Add(this.soloWinPLabel);
             this.soloPanel.Controls.Add(this.soloWinsLabel);
             this.soloPanel.Controls.Add(this.soloLosesLabel);
@@ -199,7 +202,7 @@
             this.soloWinsLabel.BackColor = System.Drawing.Color.Transparent;
             this.soloWinsLabel.Font = new System.Drawing.Font("Verdana", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.soloWinsLabel.ForeColor = System.Drawing.Color.LightSkyBlue;
-            this.soloWinsLabel.Location = new System.Drawing.Point(38, 61);
+            this.soloWinsLabel.Location = new System.Drawing.Point(70, 61);
             this.soloWinsLabel.Name = "soloWinsLabel";
             this.soloWinsLabel.Size = new System.Drawing.Size(41, 18);
             this.soloWinsLabel.TabIndex = 3;
@@ -211,7 +214,7 @@
             this.soloLosesLabel.BackColor = System.Drawing.Color.Transparent;
             this.soloLosesLabel.Font = new System.Drawing.Font("Verdana", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.soloLosesLabel.ForeColor = System.Drawing.Color.LightSkyBlue;
-            this.soloLosesLabel.Location = new System.Drawing.Point(112, 61);
+            this.soloLosesLabel.Location = new System.Drawing.Point(146, 61);
             this.soloLosesLabel.Name = "soloLosesLabel";
             this.soloLosesLabel.Size = new System.Drawing.Size(33, 18);
             this.soloLosesLabel.TabIndex = 2;
@@ -223,7 +226,7 @@
             this.soloLPLabel.BackColor = System.Drawing.Color.Transparent;
             this.soloLPLabel.Font = new System.Drawing.Font("Verdana", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.soloLPLabel.ForeColor = System.Drawing.Color.LightSkyBlue;
-            this.soloLPLabel.Location = new System.Drawing.Point(70, 21);
+            this.soloLPLabel.Location = new System.Drawing.Point(12, 61);
             this.soloLPLabel.Name = "soloLPLabel";
             this.soloLPLabel.Size = new System.Drawing.Size(43, 18);
             this.soloLPLabel.TabIndex = 1;
@@ -231,6 +234,7 @@
             // 
             // flexPanel
             // 
+            this.flexPanel.Controls.Add(this.flexDivName);
             this.flexPanel.Controls.Add(this.flexWinPLabel);
             this.flexPanel.Controls.Add(this.flexLosesLabel);
             this.flexPanel.Controls.Add(this.flexWinsLabel);
@@ -259,7 +263,7 @@
             this.flexLosesLabel.BackColor = System.Drawing.Color.Transparent;
             this.flexLosesLabel.Font = new System.Drawing.Font("Verdana", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.flexLosesLabel.ForeColor = System.Drawing.Color.LightSkyBlue;
-            this.flexLosesLabel.Location = new System.Drawing.Point(121, 61);
+            this.flexLosesLabel.Location = new System.Drawing.Point(143, 61);
             this.flexLosesLabel.Name = "flexLosesLabel";
             this.flexLosesLabel.Size = new System.Drawing.Size(33, 18);
             this.flexLosesLabel.TabIndex = 5;
@@ -271,7 +275,7 @@
             this.flexWinsLabel.BackColor = System.Drawing.Color.Transparent;
             this.flexWinsLabel.Font = new System.Drawing.Font("Verdana", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.flexWinsLabel.ForeColor = System.Drawing.Color.LightSkyBlue;
-            this.flexWinsLabel.Location = new System.Drawing.Point(29, 61);
+            this.flexWinsLabel.Location = new System.Drawing.Point(18, 61);
             this.flexWinsLabel.Name = "flexWinsLabel";
             this.flexWinsLabel.Size = new System.Drawing.Size(41, 18);
             this.flexWinsLabel.TabIndex = 5;
@@ -283,7 +287,7 @@
             this.flexLPLabel.BackColor = System.Drawing.Color.Transparent;
             this.flexLPLabel.Font = new System.Drawing.Font("Verdana", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.flexLPLabel.ForeColor = System.Drawing.Color.LightSkyBlue;
-            this.flexLPLabel.Location = new System.Drawing.Point(71, 21);
+            this.flexLPLabel.Location = new System.Drawing.Point(82, 61);
             this.flexLPLabel.Name = "flexLPLabel";
             this.flexLPLabel.Size = new System.Drawing.Size(43, 18);
             this.flexLPLabel.TabIndex = 0;
@@ -324,6 +328,30 @@
             this.masteryNameLabel.TabIndex = 13;
             this.masteryNameLabel.Text = "Jhin";
             this.masteryNameLabel.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            // 
+            // soloDivName
+            // 
+            this.soloDivName.AutoSize = true;
+            this.soloDivName.BackColor = System.Drawing.Color.Transparent;
+            this.soloDivName.Font = new System.Drawing.Font("Verdana", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.soloDivName.ForeColor = System.Drawing.Color.LightSkyBlue;
+            this.soloDivName.Location = new System.Drawing.Point(12, 22);
+            this.soloDivName.Name = "soloDivName";
+            this.soloDivName.Size = new System.Drawing.Size(83, 18);
+            this.soloDivName.TabIndex = 5;
+            this.soloDivName.Text = "Bitchbois";
+            // 
+            // flexDivName
+            // 
+            this.flexDivName.AutoSize = true;
+            this.flexDivName.BackColor = System.Drawing.Color.Transparent;
+            this.flexDivName.Font = new System.Drawing.Font("Verdana", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.flexDivName.ForeColor = System.Drawing.Color.LightSkyBlue;
+            this.flexDivName.Location = new System.Drawing.Point(18, 22);
+            this.flexDivName.Name = "flexDivName";
+            this.flexDivName.Size = new System.Drawing.Size(83, 18);
+            this.flexDivName.TabIndex = 6;
+            this.flexDivName.Text = "Bitchbois";
             // 
             // Datascreen
             // 
@@ -385,5 +413,7 @@
         private System.Windows.Forms.PictureBox champPortrait;
         private System.Windows.Forms.Label masteryLabel;
         private System.Windows.Forms.Label masteryNameLabel;
+        private System.Windows.Forms.Label soloDivName;
+        private System.Windows.Forms.Label flexDivName;
     }
 }
