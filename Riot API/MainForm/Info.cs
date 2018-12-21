@@ -3,6 +3,8 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
+using Newtonsoft.Json;
+using Newtonsoft.Json.Linq;
 
 namespace MainForm
 {
@@ -27,6 +29,7 @@ namespace MainForm
         public int leaguePoints { get; set; }
         public int wins { get; set; }
         public int losses { get; set; }
+        public JsonArrayAttribute miniSeries { get; set; }
 
         //ranked Flex class
         public Flex flexQ = new Flex();

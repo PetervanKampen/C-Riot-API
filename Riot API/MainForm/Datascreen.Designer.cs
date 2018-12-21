@@ -28,15 +28,12 @@
         /// </summary>
         private void InitializeComponent()
         {
-            this.summonerIcon = new System.Windows.Forms.PictureBox();
             this.levelLabel = new System.Windows.Forms.Label();
             this.nameLabel = new System.Windows.Forms.Label();
             this.soloIndicator = new System.Windows.Forms.Label();
             this.flexIndicator = new System.Windows.Forms.Label();
             this.soloLabel = new System.Windows.Forms.Label();
             this.flexLabel = new System.Windows.Forms.Label();
-            this.soloIcon = new System.Windows.Forms.PictureBox();
-            this.flexIcon = new System.Windows.Forms.PictureBox();
             this.soloPanel = new System.Windows.Forms.Panel();
             this.soloDivName = new System.Windows.Forms.Label();
             this.soloWinPLabel = new System.Windows.Forms.Label();
@@ -49,30 +46,22 @@
             this.flexLosesLabel = new System.Windows.Forms.Label();
             this.flexWinsLabel = new System.Windows.Forms.Label();
             this.flexLPLabel = new System.Windows.Forms.Label();
-            this.champPortrait = new System.Windows.Forms.PictureBox();
             this.masteryLabel = new System.Windows.Forms.Label();
             this.masteryNameLabel = new System.Windows.Forms.Label();
             this.masteryIndicator = new System.Windows.Forms.Label();
             this.championImage = new System.Windows.Forms.PictureBox();
-            ((System.ComponentModel.ISupportInitialize)(this.summonerIcon)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.soloIcon)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.flexIcon)).BeginInit();
+            this.masteryIcon = new System.Windows.Forms.PictureBox();
+            this.flexIcon = new System.Windows.Forms.PictureBox();
+            this.soloIcon = new System.Windows.Forms.PictureBox();
+            this.summonerIcon = new System.Windows.Forms.PictureBox();
             this.soloPanel.SuspendLayout();
             this.flexPanel.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.champPortrait)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.championImage)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.masteryIcon)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.flexIcon)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.soloIcon)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.summonerIcon)).BeginInit();
             this.SuspendLayout();
-            // 
-            // summonerIcon
-            // 
-            this.summonerIcon.BackColor = System.Drawing.SystemColors.Desktop;
-            this.summonerIcon.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            this.summonerIcon.Location = new System.Drawing.Point(311, 76);
-            this.summonerIcon.Name = "summonerIcon";
-            this.summonerIcon.Size = new System.Drawing.Size(200, 200);
-            this.summonerIcon.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
-            this.summonerIcon.TabIndex = 0;
-            this.summonerIcon.TabStop = false;
             // 
             // levelLabel
             // 
@@ -148,31 +137,6 @@
             this.flexLabel.Size = new System.Drawing.Size(69, 23);
             this.flexLabel.TabIndex = 6;
             this.flexLabel.Text = "Iron 4";
-            // 
-            // soloIcon
-            // 
-            this.soloIcon.BackColor = System.Drawing.Color.Transparent;
-            this.soloIcon.BackgroundImageLayout = System.Windows.Forms.ImageLayout.None;
-            this.soloIcon.Image = global::MainForm.Properties.Resources.iron;
-            this.soloIcon.Location = new System.Drawing.Point(536, 76);
-            this.soloIcon.Name = "soloIcon";
-            this.soloIcon.Size = new System.Drawing.Size(220, 200);
-            this.soloIcon.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
-            this.soloIcon.TabIndex = 7;
-            this.soloIcon.TabStop = false;
-            this.soloIcon.Click += new System.EventHandler(this.soloIcon_Click);
-            // 
-            // flexIcon
-            // 
-            this.flexIcon.BackColor = System.Drawing.Color.Transparent;
-            this.flexIcon.Image = global::MainForm.Properties.Resources.grandmaster;
-            this.flexIcon.Location = new System.Drawing.Point(803, 76);
-            this.flexIcon.Name = "flexIcon";
-            this.flexIcon.Size = new System.Drawing.Size(220, 200);
-            this.flexIcon.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
-            this.flexIcon.TabIndex = 8;
-            this.flexIcon.TabStop = false;
-            this.flexIcon.Click += new System.EventHandler(this.flexIcon_Click);
             // 
             // soloPanel
             // 
@@ -322,17 +286,6 @@
             this.flexLPLabel.TabIndex = 0;
             this.flexLPLabel.Text = "0 LP";
             // 
-            // champPortrait
-            // 
-            this.champPortrait.BackColor = System.Drawing.Color.Black;
-            this.champPortrait.BackgroundImageLayout = System.Windows.Forms.ImageLayout.None;
-            this.champPortrait.Location = new System.Drawing.Point(303, 421);
-            this.champPortrait.Name = "champPortrait";
-            this.champPortrait.Size = new System.Drawing.Size(68, 72);
-            this.champPortrait.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
-            this.champPortrait.TabIndex = 11;
-            this.champPortrait.TabStop = false;
-            // 
             // masteryLabel
             // 
             this.masteryLabel.AutoSize = true;
@@ -351,7 +304,7 @@
             this.masteryNameLabel.BackColor = System.Drawing.Color.Transparent;
             this.masteryNameLabel.Font = new System.Drawing.Font("Verdana", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.masteryNameLabel.ForeColor = System.Drawing.Color.LightSkyBlue;
-            this.masteryNameLabel.Location = new System.Drawing.Point(377, 440);
+            this.masteryNameLabel.Location = new System.Drawing.Point(385, 425);
             this.masteryNameLabel.Name = "masteryNameLabel";
             this.masteryNameLabel.Size = new System.Drawing.Size(54, 25);
             this.masteryNameLabel.TabIndex = 13;
@@ -364,7 +317,7 @@
             this.masteryIndicator.BackColor = System.Drawing.Color.Transparent;
             this.masteryIndicator.Font = new System.Drawing.Font("Verdana", 18F);
             this.masteryIndicator.ForeColor = System.Drawing.Color.LightSkyBlue;
-            this.masteryIndicator.Location = new System.Drawing.Point(306, 360);
+            this.masteryIndicator.Location = new System.Drawing.Point(306, 340);
             this.masteryIndicator.Name = "masteryIndicator";
             this.masteryIndicator.Size = new System.Drawing.Size(205, 29);
             this.masteryIndicator.TabIndex = 14;
@@ -379,6 +332,56 @@
             this.championImage.TabIndex = 15;
             this.championImage.TabStop = false;
             // 
+            // masteryIcon
+            // 
+            this.masteryIcon.BackColor = System.Drawing.Color.Black;
+            this.masteryIcon.BackgroundImageLayout = System.Windows.Forms.ImageLayout.None;
+            this.masteryIcon.Image = global::MainForm.Properties.Resources.Champion_Mastery_Level_7;
+            this.masteryIcon.Location = new System.Drawing.Point(311, 400);
+            this.masteryIcon.Name = "masteryIcon";
+            this.masteryIcon.Size = new System.Drawing.Size(68, 72);
+            this.masteryIcon.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
+            this.masteryIcon.TabIndex = 11;
+            this.masteryIcon.TabStop = false;
+            // 
+            // flexIcon
+            // 
+            this.flexIcon.BackColor = System.Drawing.Color.Transparent;
+            this.flexIcon.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.flexIcon.Image = global::MainForm.Properties.Resources.grandmaster;
+            this.flexIcon.Location = new System.Drawing.Point(803, 76);
+            this.flexIcon.Name = "flexIcon";
+            this.flexIcon.Size = new System.Drawing.Size(220, 200);
+            this.flexIcon.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
+            this.flexIcon.TabIndex = 8;
+            this.flexIcon.TabStop = false;
+            this.flexIcon.Click += new System.EventHandler(this.flexIcon_Click);
+            // 
+            // soloIcon
+            // 
+            this.soloIcon.BackColor = System.Drawing.Color.Transparent;
+            this.soloIcon.BackgroundImageLayout = System.Windows.Forms.ImageLayout.None;
+            this.soloIcon.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.soloIcon.Image = global::MainForm.Properties.Resources.iron;
+            this.soloIcon.Location = new System.Drawing.Point(536, 76);
+            this.soloIcon.Name = "soloIcon";
+            this.soloIcon.Size = new System.Drawing.Size(220, 200);
+            this.soloIcon.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
+            this.soloIcon.TabIndex = 7;
+            this.soloIcon.TabStop = false;
+            this.soloIcon.Click += new System.EventHandler(this.soloIcon_Click);
+            // 
+            // summonerIcon
+            // 
+            this.summonerIcon.BackColor = System.Drawing.SystemColors.Desktop;
+            this.summonerIcon.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.summonerIcon.Location = new System.Drawing.Point(311, 76);
+            this.summonerIcon.Name = "summonerIcon";
+            this.summonerIcon.Size = new System.Drawing.Size(200, 200);
+            this.summonerIcon.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
+            this.summonerIcon.TabIndex = 0;
+            this.summonerIcon.TabStop = false;
+            // 
             // Datascreen
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -390,7 +393,7 @@
             this.Controls.Add(this.masteryIndicator);
             this.Controls.Add(this.masteryNameLabel);
             this.Controls.Add(this.masteryLabel);
-            this.Controls.Add(this.champPortrait);
+            this.Controls.Add(this.masteryIcon);
             this.Controls.Add(this.flexPanel);
             this.Controls.Add(this.soloPanel);
             this.Controls.Add(this.flexIcon);
@@ -405,15 +408,15 @@
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedSingle;
             this.Name = "Datascreen";
             this.Text = "Datascreen";
-            ((System.ComponentModel.ISupportInitialize)(this.summonerIcon)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.soloIcon)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.flexIcon)).EndInit();
             this.soloPanel.ResumeLayout(false);
             this.soloPanel.PerformLayout();
             this.flexPanel.ResumeLayout(false);
             this.flexPanel.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.champPortrait)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.championImage)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.masteryIcon)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.flexIcon)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.soloIcon)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.summonerIcon)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -440,7 +443,7 @@
         private System.Windows.Forms.Label flexWinPLabel;
         private System.Windows.Forms.Label flexLosesLabel;
         private System.Windows.Forms.Label flexWinsLabel;
-        private System.Windows.Forms.PictureBox champPortrait;
+        private System.Windows.Forms.PictureBox masteryIcon;
         private System.Windows.Forms.Label masteryLabel;
         private System.Windows.Forms.Label masteryNameLabel;
         private System.Windows.Forms.Label soloDivName;

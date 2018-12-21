@@ -89,7 +89,16 @@ namespace MainForm
                 solo = flex;
                 flex = temp;
             }
-
+/*
+            if (solo.Contains("miniSeries\":{"))
+            {
+                solo.Replace("\"miniSeries\":{\"target\":2,\"wins\":0,\"losses\":0,\"progress\":\"NNN\"}", "");
+            }
+            if(flex.Contains("miniSeries\":{"))
+            {
+                flex.Replace("miniSeries\":{", "");
+            }
+            */
             Info rankedData = new Info();
 
             try
@@ -103,7 +112,14 @@ namespace MainForm
                 {
                     rankedData = JsonConvert.DeserializeObject<Info>(solo);
                 }
+            }
+            catch (JsonReaderException e)
+            {
+                Console.WriteLine("FUCK solo" + e.Message);
+            }
 
+            try
+            {           
                 if (flex == "")
                 {
                     flex = "{\"leagueId\":\"\",\"leagueName\":\"\",\"tier\":\"PROVISIONAL\",\"queueType\":\"RANKED_FLEX_SR\",\"rank\":\"\",\"playerOrTeamId\":\"\",\"playerOrTeamName\":\"\",\"leaguePoints\":0,\"wins\":0,\"losses\":0}";
@@ -116,7 +132,7 @@ namespace MainForm
             }
             catch(JsonReaderException e)
             {
-                Console.WriteLine("FUCK " + e.Message);
+                Console.WriteLine("FUCK flex" + e.Message);
             }
             return rankedData;
         }

@@ -123,8 +123,19 @@ namespace MainForm
 
             masteryLabel.Text = champData.championPoints.ToString() + "\nMastery Points";
             masteryNameLabel.Text = champData.championName;
-            champPortrait.ImageLocation = "http://ddragon.leagueoflegends.com/cdn/8.24.1/img/champion/" + champData.championName + ".png";
+           // masteryIcon.ImageLocation = "http://ddragon.leagueoflegends.com/cdn/8.24.1/img/champion/" + champData.championName + ".png";
             championImage.ImageLocation = "http://ddragon.leagueoflegends.com/cdn/img/champion/loading/" + champData.championName + "_0.jpg";
+
+            switch(champData.championLevel)
+            {             
+                case 1: masteryIcon.Image = global::MainForm.Properties.Resources.Champion_Mastery_Level_1; break;
+                case 2: masteryIcon.Image = global::MainForm.Properties.Resources.Champion_Mastery_Level_2; break;
+                case 3: masteryIcon.Image = global::MainForm.Properties.Resources.Champion_Mastery_Level_3; break;
+                case 4: masteryIcon.Image = global::MainForm.Properties.Resources.Champion_Mastery_Level_4; break;
+                case 5: masteryIcon.Image = global::MainForm.Properties.Resources.Champion_Mastery_Level_5; break;
+                case 6: masteryIcon.Image = global::MainForm.Properties.Resources.Champion_Mastery_Level_6; break;
+                case 7: masteryIcon.Image = global::MainForm.Properties.Resources.Champion_Mastery_Level_7; break;
+            }
         }
 
         private void soloIcon_Click(object sender, EventArgs e)
