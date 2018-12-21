@@ -63,8 +63,6 @@ namespace MainForm
                 this.soloWinPLabel.ForeColor = System.Drawing.Color.Red;
             }
 
-            Console.WriteLine("cunt: "+rankedData.flexQ.leagueName);
-
             flexLabel.Text = rankedData.flexQ.tier + " " + rankedData.flexQ.rank;
             flexLPLabel.Text = rankedData.flexQ.leaguePoints + " LP";
             if (rankedData.flexQ.leaguePoints == 0)
@@ -122,8 +120,7 @@ namespace MainForm
             champData = new Requester().champData(data.Region, summonerData.id.ToString());
 
             masteryLabel.Text = champData.championPoints.ToString() + "\nMastery Points";
-            masteryNameLabel.Text = champData.championName;
-           // masteryIcon.ImageLocation = "http://ddragon.leagueoflegends.com/cdn/8.24.1/img/champion/" + champData.championName + ".png";
+            masteryNameLabel.Text = champData.championName;        
             championImage.ImageLocation = "http://ddragon.leagueoflegends.com/cdn/img/champion/loading/" + champData.championName + "_0.jpg";
 
             switch(champData.championLevel)

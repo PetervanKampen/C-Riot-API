@@ -1,4 +1,4 @@
-﻿using System;
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
@@ -62,6 +62,8 @@ namespace MainForm
                 Console.WriteLine("404");
             }
 
+            Console.WriteLine(info);
+
             string solo = "";
             string flex = "";
             bool secondstring = false;
@@ -83,22 +85,78 @@ namespace MainForm
                 }
             }
 
+            Console.WriteLine("Flex TT info: " + flex);
+
+            if(flex.Contains("RANKED_FLEX_TT"))
+            {
+                string flexholder = flex;
+                string tt = "{";
+                flex = "{";
+                bool secondstring2 = false;
+                for (int i = 1; i < flexholder.Length; i++)
+                {
+                    char[] array = flexholder.ToCharArray();
+                    if (!secondstring2)
+                    {
+                        tt += array[i];
+                    }
+                    else
+                    {
+                        flex += array[i];
+                    }
+                    if (array[i].Equals('}'))
+                    {
+                        secondstring2 = true;
+                        i++;
+                    }
+                }
+                if (flex.Contains("RANKED_FLEX_TT"))
+                {
+                    string temp = tt;
+                    tt = flex;
+                    flex = temp;
+                }
+            }
+            else if (solo.Contains("RANKED_FLEX_TT"))
+            {
+                string soloholder = solo;
+                string tt = "{";
+                solo = "{";
+                bool secondstring2 = false;
+                for (int i = 1; i < soloholder.Length; i++)
+                {
+                    char[] array = soloholder.ToCharArray();
+                    if (!secondstring2)
+                    {
+                        solo += array[i];
+                    }
+                    else
+                    {
+                        tt += array[i];
+                    }
+                    if (array[i].Equals('}'))
+                    {
+                        secondstring2 = true;
+                        i++;
+                    }
+                }
+                if (solo.Contains("RANKED_FLEX_TT"))
+                {
+                    string temp = tt;
+                    tt = solo;
+                    solo = temp;
+                }
+            }
+
+            Console.WriteLine("solo: " + solo + "\nflex: " + flex);
+
             if(solo.Contains("RANKED_FLEX_SR") || flex.Contains("RANKED_SOLO_5x5"))
             {
                 string temp = solo;
                 solo = flex;
                 flex = temp;
             }
-/*
-            if (solo.Contains("miniSeries\":{"))
-            {
-                solo.Replace("\"miniSeries\":{\"target\":2,\"wins\":0,\"losses\":0,\"progress\":\"NNN\"}", "");
-            }
-            if(flex.Contains("miniSeries\":{"))
-            {
-                flex.Replace("miniSeries\":{", "");
-            }
-            */
+
             Info rankedData = new Info();
 
             try
@@ -172,7 +230,6 @@ namespace MainForm
                     delete = true;
                 }
             }
-            Console.WriteLine("champ info: " + newinfo);
             Info champData = new Info();
             champData = JsonConvert.DeserializeObject<Info>(newinfo);
             champData.championName = new ChampionID().IDtoName(champData.championId);
