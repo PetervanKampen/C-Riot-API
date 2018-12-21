@@ -12,7 +12,7 @@ namespace MainForm
 {
     class Requester
     {
-        private string key = "RGAPI-0bff1920-2eea-4eac-a99c-f847a5f99719";
+        private string key = "";
 
         public Info summonerData(string region, string name)
         {
