@@ -133,6 +133,9 @@
   <data name="challenger" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Images\challenger.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
+  <data name="iron" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Images\iron.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
   <data name="Champion_Mastery_Level_4" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Images\Champion_Mastery_Level_4.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
@@ -147,9 +150,6 @@
   </data>
   <data name="platinum" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Images\platinum.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
-  </data>
-  <data name="LoL_Icon" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Images\LoL_Icon.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
   <data name="Champion_Mastery_Level_3" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Images\Champion_Mastery_Level_3.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
@@ -169,13 +169,13 @@
   <data name="silver" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Images\silver.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
-  <data name="iron" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Images\iron.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  <data name="LoL_Icon" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Images\LoL_Icon.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
   <data name="bronze" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Images\bronze.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
-  <data name="Champion_Mastery_Level_7_Square" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Images\Champion_Mastery_Level_7_Square.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  <data name="hole" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Images\hole.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
 </root>

@@ -157,7 +157,7 @@
     <None Include="Images\Champion_Mastery_Level_7.png" />
   </ItemGroup>
   <ItemGroup>
-    <None Include="Images\Champion_Mastery_Level_7_Square.png" />
+    <None Include="Images\hole.png" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 

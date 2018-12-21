@@ -153,16 +153,6 @@ namespace MainForm.Properties {
         /// <summary>
         ///   Looks up a localized resource of type System.Drawing.Bitmap.
         /// </summary>
-        internal static System.Drawing.Bitmap Champion_Mastery_Level_7_Square {
-            get {
-                object obj = ResourceManager.GetObject("Champion_Mastery_Level_7_Square", resourceCulture);
-                return ((System.Drawing.Bitmap)(obj));
-            }
-        }
-        
-        /// <summary>
-        ///   Looks up a localized resource of type System.Drawing.Bitmap.
-        /// </summary>
         internal static System.Drawing.Bitmap diamond {
             get {
                 object obj = ResourceManager.GetObject("diamond", resourceCulture);
@@ -186,6 +176,16 @@ namespace MainForm.Properties {
         internal static System.Drawing.Bitmap grandmaster {
             get {
                 object obj = ResourceManager.GetObject("grandmaster", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap hole {
+            get {
+                object obj = ResourceManager.GetObject("hole", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
             }
         }
